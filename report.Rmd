@@ -3,28 +3,101 @@ title: "COVID-19 Cases in Mexico"
 author: "Kristina Baus, Sheena Lim, Lauren McGarvey, Elenzie France, and Abigail Yemisrach"
 date: "2026-11-12"
 output: html_document
+params:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE
+)
+
+library(here)
+library(tidyverse)
+library(knitr)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r, here-i-am, include = FALSE}
+here::i_am("report.Rmd")
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r load-data}
+covid_data <- read_csv(
+  here("data", "covid_sub.csv")
+)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+# Introduction
+
+This project examines associations between sex and COVID-19 clinical outcomes among patients in Mexico. We analyze a 20% subset of the original COVID-19 dataset.
+
+# Data and Methods
+
+The dataset contains patient demographic and clinical information. Each coder examines an assigned COVID-19 outcome using summary tables, visualizations, and statistical tests.
+
+# Results
+
+## Coder 1: Pneumonia and Sex
+
+This analysis examines whether pneumonia prevalence differs between male and female patients.
+
+### Table 1: Pneumonia by Sex
+
+```{r coder1-table}
+
+```
+
+### Figure 1: Pneumonia by Age Group and Sex
+
+```{r coder1-figure, out.width="85%"}
+
+```
+
+## Coder 2: COVID-19 Classification and Sex
+This analysis examines differences in COVID-19 classification by sex.
+
+### Table 2: COVID-19 Classification by Sex
+
+```{r coder2-table}
+
+```
+
+### Figure 2: COVID-19 Classification by Sex
+
+```{r coder2-figure, out.width="85%"}
+
+```
+
+## Coder 3: Immunosuppression and Sex
+
+This analysis examines immunosuppression prevalence by sex and patient type.
+
+### Table 3: Immunosuppression by Sex
+
+```{r coder3-table}
+
+```
+
+### Figure 3: Immunosuppression by Patient Type and Sex
+
+```{r coder3-figure, out.width="85%"}
+
+```
+
+## Coder 4: 
+
+
+
+### Table 4
+
+```{r coder4-table}
+
+```
+
+### Figure 4
+
+```{r coder4-figure, out.width="85%"}
+
+```
+
