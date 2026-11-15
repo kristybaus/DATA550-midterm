@@ -58,7 +58,7 @@ The final report will use R Markdown parameters to allow users to customize the 
 
 Users can select:
 
-- **Outcome:** Pneumonia, COVID-19 classification, or immunosuppression.
+- **Outcome:** All analyses, pneumonia, COVID-19 classification, immunosuppression, or hospitalization.
 - **Population:** Overall study population or results stratified by sex.
 
 Once implemented, these parameters will allow users to generate customized reports through the Makefile.
