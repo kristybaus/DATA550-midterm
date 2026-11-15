@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-This project examines the association between sex and COVID-19 clinical outcomes among patients in Mexico. Using a 20% subset of the original dataset, our team investigates pneumonia prevalence, COVID-19 classification, and immunosuppression status.
+This project examines the association between sex and COVID-19 clinical outcomes among patients in Mexico. Using a 20% subset of the original dataset, our team investigates pneumonia prevalence, COVID-19 classification, immunosuppression, and hospitalization status.
 
 ## Data Source
 
@@ -15,22 +15,26 @@ This project examines the association between sex and COVID-19 clinical outcomes
 ## Project Structure
 
 ```text
-project/
+midterm/
 ├── data/
 │   ├── covid_sub.csv
 │   └── covid_readme.txt
 ├── scripts/
 │   ├── coder1/
 │   ├── coder2/
-│   └── coder3/
+│   ├── coder3/
+│   ├── coder4/
+│   └── render_report.R
 ├── outputs/
 │   ├── coder1/
 │   ├── coder2/
-│   └── coder3/
+│   ├── coder3/
+│   └── coder4/
 ├── reports/
-├── misc/
+├── report.Rmd
 ├── Makefile
-└── README.md
+├── README.md
+└── midterm.Rproj
 ```
 
 ## Instructions for Building the Report
