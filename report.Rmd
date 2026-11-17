@@ -29,14 +29,6 @@ covid_data <- read_csv(
 )
 ```
 
-# Introduction
-
-This project examines associations between sex and COVID-19 clinical outcomes among patients in Mexico. We analyze a 20% subset of the original COVID-19 dataset.
-
-# Data and Methods
-
-The dataset contains patient demographic and clinical information. Each coder examines an assigned COVID-19 outcome using summary tables, visualizations, and statistical tests.
-
 # Results
 
 ## Coder 1: Pneumonia and Sex
@@ -56,6 +48,7 @@ This analysis examines whether pneumonia prevalence differs between male and fem
 ```
 
 ## Coder 2: COVID-19 Classification and Sex
+
 This analysis examines differences in COVID-19 classification by sex.
 
 ### Table 2: COVID-19 Classification by Sex

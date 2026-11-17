@@ -24,7 +24,7 @@ outputs/coder3/table3.rds outputs/coder3/figure3.png &: scripts/coder3/immunosup
 	Rscript scripts/coder3/immunosuppression.R
 
 # Coder 4: 
-outputs/coder4/table4.rds outputs/coder4/figure4.png &: scripts/coder4/____.R data/covid_sub.csv
+outputs/coder4/table4.rds outputs/coder4/figure4.png &: scripts/coder4/analysis.R data/covid_sub.csv
 	Rscript scripts/coder4/analysis.R
 
 # Remove generated outputs
