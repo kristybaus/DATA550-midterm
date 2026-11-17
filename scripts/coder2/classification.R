@@ -50,8 +50,9 @@ table2_display <- kable(table2_classification_by_sex,
 
 table2_display
 
-saveRDS(table2_classification_by_sex,
-        here::here("outputs/coder2/table2_classification_by_sex.rds"))
+saveRDS(
+  table2_classification_by_sex,
+  here::here("outputs/coder2/table2_classification_by_sex.rds"))
 
 
 figure2_classification_by_sex <- ggplot(
@@ -78,3 +79,4 @@ figure2_classification_by_sex
 
 ggsave(here::here("outputs/coder2/figure2_classification_by_sex.png"),
        figure2_classification_by_sex, width = 9, height = 5.5)
+

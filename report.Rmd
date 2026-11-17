@@ -5,8 +5,6 @@ date: "2026-11-12"
 output: html_document
 params:
   outcome: "all"
-  population: "overall"
-  
 ---
 
 ```{r setup, include=FALSE}
@@ -43,6 +41,8 @@ This analysis examines whether pneumonia prevalence differs between male and fem
 table1 <- readRDS(
   here::here("outputs/coder1/table1.rds")
 )
+
+table1
 ```
 
 ### Figure 1: Pneumonia by Age Group and Sex
@@ -63,6 +63,13 @@ This analysis examines differences in COVID-19 classification by sex.
 table2 <- readRDS(
   here::here("outputs/coder2/table2_classification_by_sex.rds")
 )
+
+knitr::kable(
+  table2,
+  caption = "COVID-19 Classification by Sex",
+  align = "lcc"
+)
+
 ```
 
 ### Figure 2: COVID-19 Classification by Sex
@@ -80,13 +87,19 @@ This analysis examines immunosuppression prevalence by sex and patient type.
 ### Table 3: Immunosuppression by Sex
 
 ```{r coder3-table, eval=params$outcome %in% c("all", "immunosuppression")}
+table3 <- readRDS(
+  here::here("outputs/coder3/table3.rds")
+)
 
+table3
 ```
 
 ### Figure 3: Immunosuppression by Patient Type and Sex
 
 ```{r coder3-figure, eval=params$outcome %in% c("all", "immunosuppression"), out.width="85%"}
-
+knitr::include_graphics(
+  here::here("outputs/coder3/figure3.png")
+)
 ```
 
 ## Coder 4: 
@@ -99,6 +112,18 @@ This analysis examines whether hospitalization differs between male and female p
 table4 <- readRDS(
   here::here("outputs/coder4/table4.rds")
 )
+knitr::kable(
+  table4$table,
+  caption = "Hospitalization Status by Sex",
+  align = "lcc"
+)
+
+cat(
+  "\n\n**Chi-square test p-value:**",
+  format.pval(table4$chi_square$p.value, digits = 3),
+  "\n\n"
+)
+
 ```
 
 ### Figure 4
