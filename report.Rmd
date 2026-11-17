@@ -85,17 +85,21 @@ This analysis examines immunosuppression prevalence by sex and patient type.
 
 ## Coder 4: 
 
-
+This analysis examines whether hospitalization differs between male and female patients.
 
 ### Table 4
 
 ```{r coder4-table}
-
+table4 <- readRDS(
+  here::here("outputs/coder4/table4.rds")
+)
 ```
 
 ### Figure 4
 
 ```{r coder4-figure, out.width="85%"}
-
+knitr::include_graphics(
+  here::here("outputs/coder4/figure4.png")
+)
 ```
 
