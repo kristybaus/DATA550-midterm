@@ -4,6 +4,8 @@ author: "Kristina Baus, Sheena Lim, Lauren McGarvey, Elenzie France, and Abigail
 date: "2026-11-12"
 output: html_document
 params:
+  outcome: "all"
+  population: "overall"
   
 ---
 
@@ -37,7 +39,7 @@ This analysis examines whether pneumonia prevalence differs between male and fem
 
 ### Table 1: Pneumonia by Sex
 
-```{r coder1-table}
+```{r coder1-table, eval=params$outcome %in% c("all", "pneumonia")}
 table1 <- readRDS(
   here::here("outputs/coder1/table1.rds")
 )
@@ -45,7 +47,7 @@ table1 <- readRDS(
 
 ### Figure 1: Pneumonia by Age Group and Sex
 
-```{r coder1-figure, out.width="85%"}
+```{r coder1-figure, eval=params$outcome %in% c("all", "pneumonia"), out.width="85%"}
 knitr::include_graphics(
   here::here("outputs/coder1/figure1.png")
 )
@@ -57,14 +59,18 @@ This analysis examines differences in COVID-19 classification by sex.
 
 ### Table 2: COVID-19 Classification by Sex
 
-```{r coder2-table}
-
+```{r coder2-table, eval=params$outcome %in% c("all", "classification")}
+table2 <- readRDS(
+  here::here("outputs/coder2/table2_classification_by_sex.rds")
+)
 ```
 
 ### Figure 2: COVID-19 Classification by Sex
 
-```{r coder2-figure, out.width="85%"}
-
+```{r coder2-figure, eval=params$outcome %in% c("all", "classification"), out.width="85%"}
+knitr::include_graphics(
+  here::here("outputs/coder2/figure2_classification_by_sex.png")
+)
 ```
 
 ## Coder 3: Immunosuppression and Sex
@@ -73,13 +79,13 @@ This analysis examines immunosuppression prevalence by sex and patient type.
 
 ### Table 3: Immunosuppression by Sex
 
-```{r coder3-table}
+```{r coder3-table, eval=params$outcome %in% c("all", "immunosuppression")}
 
 ```
 
 ### Figure 3: Immunosuppression by Patient Type and Sex
 
-```{r coder3-figure, out.width="85%"}
+```{r coder3-figure, eval=params$outcome %in% c("all", "immunosuppression"), out.width="85%"}
 
 ```
 
@@ -89,7 +95,7 @@ This analysis examines whether hospitalization differs between male and female p
 
 ### Table 4
 
-```{r coder4-table}
+```{r coder4-table, eval=params$outcome %in% c("all", "hospitalization")}
 table4 <- readRDS(
   here::here("outputs/coder4/table4.rds")
 )
@@ -97,7 +103,7 @@ table4 <- readRDS(
 
 ### Figure 4
 
-```{r coder4-figure, out.width="85%"}
+```{r coder4-figure, eval=params$outcome %in% c("all", "hospitalization"), out.width="85%"}
 knitr::include_graphics(
   here::here("outputs/coder4/figure4.png")
 )
