@@ -38,13 +38,17 @@ This analysis examines whether pneumonia prevalence differs between male and fem
 ### Table 1: Pneumonia by Sex
 
 ```{r coder1-table}
-
+table1 <- readRDS(
+  here::here("outputs/coder1/table1.rds")
+)
 ```
 
 ### Figure 1: Pneumonia by Age Group and Sex
 
 ```{r coder1-figure, out.width="85%"}
-
+knitr::include_graphics(
+  here::here("outputs/coder1/figure1.png")
+)
 ```
 
 ## Coder 2: COVID-19 Classification and Sex
