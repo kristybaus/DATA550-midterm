@@ -34,4 +34,9 @@ clean:
 	rm -f outputs/coder2/*.rds outputs/coder2/*.png
 	rm -f outputs/coder3/*.rds outputs/coder3/*.png
 	rm -f outputs/coder4/*.rds outputs/coder4/*.png
+	
+.PHONY: install
+
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
 
