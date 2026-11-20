@@ -100,4 +100,4 @@ The `outcome` parameter determines which analysis is included in the report.
 | `immunosuppression` | Displays the immunosuppression analysis |
 | `hospitalization` | Displays the hospitalization analysis |
 
-Once implemented, this parameter will allow users to generate customized reports through the Makefile.
+This parameter will allow users to generate customized reports through the Makefile.

@@ -29,13 +29,13 @@ covid_data <- read_csv(
 )
 ```
 
-# Results
-
-## Coder 1: Pneumonia and Sex
-
-This analysis examines whether pneumonia prevalence differs between male and female patients.
-
-### Table 1: Pneumonia by Sex
+```{r coder1-heading, echo=FALSE, results='asis'}
+if (params$outcome %in% c("all", "pneumonia")) {
+  cat("## Coder 1: Pneumonia and Sex\n\n")
+  cat("This analysis examines whether pneumonia prevalence differs between male and female patients.\n\n")
+  cat("### Table 1: Pneumonia by Sex\n\n")
+}
+```
 
 ```{r coder1-table, eval=params$outcome %in% c("all", "pneumonia")}
 table1 <- readRDS(
@@ -45,7 +45,11 @@ table1 <- readRDS(
 table1
 ```
 
-### Figure 1: Pneumonia by Age Group and Sex
+```{r coder1-figure-heading, echo=FALSE, results='asis'}
+if (params$outcome %in% c("all", "pneumonia")) {
+  cat("### Figure 1: Pneumonia by Sex\n\n")
+}
+```
 
 ```{r coder1-figure, eval=params$outcome %in% c("all", "pneumonia"), out.width="85%"}
 knitr::include_graphics(
@@ -53,11 +57,13 @@ knitr::include_graphics(
 )
 ```
 
-## Coder 2: COVID-19 Classification and Sex
-
-This analysis examines differences in COVID-19 classification by sex.
-
-### Table 2: COVID-19 Classification by Sex
+```{r coder2-heading, echo=FALSE, results='asis'}
+if (params$outcome %in% c("all", "classification")) {
+  cat("## Coder 2: COVID-19 Classification and Sex\n\n")
+  cat("This analysis examines differences in COVID-19 classification by sex.\n\n")
+  cat("### Table 2: COVID-19 Classification by Sex\n\n")
+}
+```
 
 ```{r coder2-table, eval=params$outcome %in% c("all", "classification")}
 table2 <- readRDS(
@@ -72,7 +78,11 @@ knitr::kable(
 
 ```
 
-### Figure 2: COVID-19 Classification by Sex
+```{r coder2-figure-heading, echo=FALSE, results='asis'}
+if (params$outcome %in% c("all", "classification")) {
+  cat("### Figure 2: Classification by Sex\n\n")
+}
+```
 
 ```{r coder2-figure, eval=params$outcome %in% c("all", "classification"), out.width="85%"}
 knitr::include_graphics(
@@ -80,11 +90,12 @@ knitr::include_graphics(
 )
 ```
 
-## Coder 3: Immunosuppression and Sex
-
-This analysis examines immunosuppression prevalence by sex and patient type.
-
-### Table 3: Immunosuppression by Sex
+```{r coder3-heading, echo=FALSE, results='asis'}
+if (params$outcome %in% c("all", "immunosuppression")) {
+  cat("## Coder 3: Immunosuppression and Sex\n\n")
+  cat("### Table 3: Immunosuppression by Sex\n\n")
+}
+```
 
 ```{r coder3-table, eval=params$outcome %in% c("all", "immunosuppression")}
 table3 <- readRDS(
@@ -93,20 +104,23 @@ table3 <- readRDS(
 
 table3
 ```
-
-### Figure 3: Immunosuppression by Patient Type and Sex
+```{r coder3-figure-heading, echo=FALSE, results='asis'}
+if (params$outcome %in% c("all", "immunosuppression")) {
+  cat("### Figure 3: Immunosuppression by Patient Type and Sex\n\n")
+}
+```
 
 ```{r coder3-figure, eval=params$outcome %in% c("all", "immunosuppression"), out.width="85%"}
 knitr::include_graphics(
   here::here("outputs/coder3/figure3.png")
 )
 ```
-
-## Coder 4: 
-
-This analysis examines whether hospitalization differs between male and female patients.
-
-### Table 4
+```{r coder4-heading, echo=FALSE, results='asis'}
+if (params$outcome %in% c("all", "hospitalization")) {
+  cat("## Coder 4: Hospitalization and Sex\n\n")
+  cat("### Table 4: Hospitalization by Sex\n\n")
+}
+```
 
 ```{r coder4-table, eval=params$outcome %in% c("all", "hospitalization")}
 table4 <- readRDS(
@@ -126,7 +140,11 @@ cat(
 
 ```
 
-### Figure 4
+```{r coder4-figure-heading, echo=FALSE, results='asis'}
+if (params$outcome %in% c("all", "hospitalization")) {
+  cat("### Figure 4: Hospitalization by Sex\n\n")
+}
+```
 
 ```{r coder4-figure, eval=params$outcome %in% c("all", "hospitalization"), out.width="85%"}
 knitr::include_graphics(
